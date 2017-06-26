@@ -8,13 +8,13 @@ node {
 
     stage('checkout') {
         checkout scm
-         sh 'git clean -fdx -e node_modules'
+         sh 'git clean -fdx'
         sh 'npm --version'
         sh 'node --version'
     }
 
     stage('install'){
-        sh 'npm prune && npm update'
+        sh 'npm install'
     }
 
     stage('build-release') {
