@@ -12,16 +12,15 @@ node {
     }
 
     stage('install'){
-        sh 'npm install'
+        sh 'npm prune && npm update'
     }
 
     stage('build-release') {
-
         sh 'npm run build-release'
     }
 
     stage('publish') {
-        sh 'cd dist'
+        sh 'cd /dist'
         sh 'npm publish'
     }
 }
