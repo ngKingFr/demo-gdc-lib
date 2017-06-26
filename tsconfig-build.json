@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration":true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false,
+    "sourceMap": true,
+    "outDir":"dist",
+    "lib": [
+      "es2015",
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/app/my-lib/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/app/**.ts",
+    "src/app/my-lib/**/*.spec.*",
+    "e2e/"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "dist",
+    "strictMetadataEmit": true
+  }
+}
