@@ -23,7 +23,7 @@ node {
     }
 
     stage('publish') {
-        sh 'cd /dist'
+        sh 'cd dist'
         sh 'npm publish'
     }
 }
