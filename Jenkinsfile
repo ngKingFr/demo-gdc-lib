@@ -14,7 +14,7 @@ node {
     }
 
     stage('install'){
-        sh 'npm install'
+        sh 'npm install --verbose'
     }
 
     stage('build-release') {
