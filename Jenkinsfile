@@ -7,6 +7,7 @@ node {
    credentials('git-gdc-demo')
 
     stage('checkout') {
+         sh 'git clean -fdx'
         sh 'npm --version'
         sh 'node --version'
     }
