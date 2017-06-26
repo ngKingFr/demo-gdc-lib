@@ -16,7 +16,8 @@ node {
     }
 
     stage('build-release') {
-        sh 'npm run build-release'
+        sh 'rm -rf dist'
+        sh 'ngc -p tsconfig-build.json && cp src/app/my-lib/package.json dist/package.json && cp src/app/my-lib/.npmrc dist/.npmrc && gulp'
     }
 
     stage('publish') {

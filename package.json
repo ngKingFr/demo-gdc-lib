@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "gulp": "gulp",
-    "build-release": "ngc -p tsconfig-build.json && cp src/app/my-lib/package.json dist/package.json && cp src/app/my-lib/.npmrc dist/.npmrc && gulp",
+    "ngc":"ngc",
     "e2e": "ng e2e"
   },
   "private": true,
