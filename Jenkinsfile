@@ -1,7 +1,9 @@
 node {
-   env.NODE_HOME="${tool 'node-7.X'}"
-   env.PATH = "${pwd()}/node_modules/.bin:${env.PATH}"
-   git([url: 'https://github.com/ngKingFr/demo-gdc-web.git', branch: 'master'])
+
+    def nodeHome = tool name: 'node-7.X', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+    env.PATH = "${pwd()}/node_modules/.bin:${env.PATH}"
+    git([url: 'https://github.com/ngKingFr/demo-gdc-web.git', branch: 'master'])
    credentials('git-gdc-demo')
 
     stage('checkout') {
