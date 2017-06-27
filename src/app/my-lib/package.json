@@ -1,5 +1,5 @@
 {
-  "name": "ng-my-lib",
+  "name": "@gdc/ng-my-lib",
   "version": "1.0.0",
   "main": "./index.js",
   "typings": "./index.d.ts",
