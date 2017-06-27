@@ -8,7 +8,7 @@ node {
 
     stage('checkout') {
         checkout scm
-         sh 'git clean -fdx'
+         sh 'git clean -fdx -e node_modules'
         sh 'npm --version'
         sh 'node --version'
     }
@@ -23,9 +23,11 @@ node {
     }
 
     stage('publish') {
-        sh 'cd dist/'
-        sh 'pwd'
-        sh 'ls -la'
-        sh 'npm publish --registry=http://172.17.0.3:8081/repository/npm-gdc-hosted/'
+        dir('dist') {
+             sh 'pwd'
+             sh 'ls -la'
+             sh 'npm publish --registry=http://172.17.0.3:8081/repository/npm-gdc-hosted/'
+        }
+
     }
 }
