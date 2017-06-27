@@ -8,7 +8,7 @@ node {
 
     stage('checkout') {
         checkout scm
-         sh 'git clean -fdx -e node_modules'
+         sh 'git clean -fdx'
         sh 'npm --version'
         sh 'node --version'
     }
