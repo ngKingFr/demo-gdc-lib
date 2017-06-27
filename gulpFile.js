@@ -22,9 +22,11 @@ function copyAssets () {
         .pipe(gulp.dest('./dist/assets')).on('end', copyScss);
 }
 function copyScss () {
-    gulp.src('./src/app/lib/**/*.scss')
+    gulp.src('./src/app/my-lib/**/*.{scss,css}')
         .pipe(gulp.dest('./dist')).on('end', inlineResource);
 }
+
+
 
 function inlineResource() {
     inlineResources('./dist');
