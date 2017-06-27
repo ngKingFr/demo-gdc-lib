@@ -14,7 +14,7 @@ node {
     }
 
     stage('install'){
-        sh 'npm prune &&  pm update'
+        sh 'npm prune &&  npm update'
     }
 
     stage('build-release') {
